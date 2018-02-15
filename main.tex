@@ -1,0 +1,101 @@
+\documentclass[12pt]{report}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,left=30mm,right=25mm,bindingoffset=6mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{float}
+\graphicspath{ {images/} }
+\usepackage[bottom]{footmisc}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage[demo]{graphicx}
+\usepackage{subfig}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[nottoc]{tocbibind}
+\renewcommand{\bibname}{References}
+\usepackage[titletoc]{appendix}
+\documentclass{article}
+\usepackage[table]{xcolor}
+ 
+\setlength{\arrayrulewidth}{1mm}
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{2.5}
+
+\linespread{1.25}
+
+ 
+\title{
+    {\textbf{A Study on Salient Region Detection Using Boundary and Color Cue}}\\
+	{\large Department of Computer Science & Engineering,}\\
+	{\large Khulna University of Engineering & Technology, Bangladesh}\\
+	{\small \textbf{Report written by}}\\
+	{\small Md Mosharaf Hossan, Roll:1307053}\\
+	{\small Tushar Ghosh, Roll:1307060}\\
+	{\small \textbf{Supervised by}}\\
+	{\small Prof. Dr. Sk. Mohammad Masudul Ahsan}\\
+    {\date{Feb 2018}}
+}
+
+\begin{document}
+
+\maketitle
+% * <mosharafkuet@gmail.com> 2018-02-10T09:09:26.388Z:
+%
+% ^.
+% * <mosharafkuet@gmail.com> 2018-02-10T09:09:24.761Z:
+%
+%
+
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
+\pagenumbering{roman}
+\maketitle
+
+\newpage
+\addcontentsline{toc}{chapter}{Acknowledgement}
+\chapter*{Acknowledgement}
+
+All the praise to the almighty Allah, whose blessing and mercy helped us to complete this thesis work well. After that, we humbly acknowledge the valuable advice, guidance and co-operation of Dr. Sk. Md. Masudul Ahsan, Professor, Department of Computer Science and Engineering, Khulna University of Engineering & Technology, under whose supervision this work was carried out. His intellectual advices, encouragement and guidance make us feel confident and inspire to go through different research ideas. From him, we have learned that scientific research needs much effort in learning and applying and need to have a broad view at problems from different perspective. We would like to convey our heartiest gratitude to all the faculty members, officials and staffs of the Department of Computer Science and Engineering as they have always extended their co-operation to complete this work. Last but not least, we wish to thank our friends and family members for their constant support.
+
+\newpage
+\addcontentsline{toc}{chapter}{Abstract}
+\chapter*{Abstract}
+Detection of visually salient image regions is useful for
+applications like object segmentation, adaptive compression,
+and object recognition. In this thesis, we describe a novel approach of visually salient region detection from images based on color and spatial distribution. We assume that foreground objects are less likely to be positioned in the border and they have more color contrast with border regions. We also assume that salient region have relatively more contrast with it's surrounding regions than a nonsalient region. We use the information of color contrast to identify the salient region.Based on these two assumption we build global contrast map and boundary aware contrast map. We also assume that salient objects tend to cover relatively small area than nonsalient object. using this assumption we build another map called color importance map. then we combine these three maps to generate our final saliency map. Both qualitative and quantitative experiments are performed on a benchmark dataset which show that our approach performs well with other state of the art method.
+
+
+
+\newpage
+\addcontentsline{toc}{chapter}{Contents}
+
+\tableofcontents
+
+\listoffigures
+
+
+\chapter{Introduction}
+\pagenumbering{arabic}
+\input{chapters/Introduction}
+
+\chapter{Literature Review}
+\input{chapters/Literature_Review}
+
+\chapter{Visual and Color Saliency}
+\input{chapters/Visual_and_Color_Saliency}
+
+\chapter{Experimental Result}
+\input{chapters/Experimental_Result}
+
+
+\chapter{Conclusion}
+\input{chapters/Conclusion}
+
+
+\bibliographystyle{unsrt}
+\bibliography{ref}
+
+\end{document}
